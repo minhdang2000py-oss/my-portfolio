@@ -1,55 +1,39 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên hệ - Lê Minh Đăng</title>
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liên hệ - Lê Minh Đăng</title>
+<meta name="description" content="Portfolio của Lê Minh Đăng - sinh viên thiết kế web">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark'}catch(e){}</script>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="brand">
-            <img src="images/logo.svg" alt="Logo Lê Minh Đăng" class="logo">
-        </a>
-        <a href="index.html">Trang chủ</a>
-        <a href="about.html">Giới thiệu</a>
-        <a href="contact.html">Liên hệ</a>
-    </nav>
-
-    <header>
-        <img src="images/avatar.jpg" alt="Ảnh chân dung Lê Minh Đăng" class="avatar">
-        <h1>Liên hệ với mình</h1>
-        <p>Rất vui được kết nối và trao đổi cùng bạn</p>
-    </header>
-
-    <section>
-        <h2>Thông tin liên hệ</h2>
-        <div class="project">
-            <p>Email: leminhdang@example.com</p>
-            <p>SĐT: 0392911503</p>
-            <p>Địa chỉ: TP. Hồ Chí Minh</p>
-        </div>
-
-        <h2>Gửi lời nhắn</h2>
-        <form class="project" id="contact-form">
-            <label for="name">Họ và tên</label>
-            <input type="text" id="name" placeholder="Nhập họ và tên" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Nhập email của bạn" required>
-
-            <label for="message">Nội dung</label>
-            <textarea id="message" rows="5" placeholder="Bạn muốn nhắn gì với mình?" required></textarea>
-
-            <button type="submit">Gửi lời nhắn</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Lê Minh Đăng. Bài tập môn Thiết kế Web.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+<nav>
+  <a href="index.html" class="brand"><img src="logo.svg" alt="Logo Lê Minh Đăng"><span>Lê Minh Đăng</span></a>
+  <div class="links">
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <a href="projects.html">Dự án</a>
+    <a href="contact.html">Liên hệ</a>
+    <button id="theme-toggle" type="button" aria-label="Đổi giao diện sáng/tối">🌙</button>
+  </div>
+</nav>
+<header class="hero"><h1>Liên hệ</h1><p>Gửi tin nhắn, mình sẽ trả lời qua email</p></header>
+<main>
+  <section class="reveal">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">Họ tên</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Nội dung</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit" class="btn">Gửi tin nhắn</button>
+    </form>
+  </section>
+</main>
+<footer>© 2026 Lê Minh Đăng. Bài tập môn Thiết kế Web.</footer>
+<script src="script.js"></script>
 </body>
 </html>

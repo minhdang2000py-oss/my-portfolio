@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dự án - Lê Minh Đăng</title>
+<meta name="description" content="Portfolio của Lê Minh Đăng - sinh viên thiết kế web">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark'}catch(e){}</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="brand"><img src="logo.svg" alt="Logo Lê Minh Đăng"><span>Lê Minh Đăng</span></a>
+  <div class="links">
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <a href="projects.html">Dự án</a>
+    <a href="contact.html">Liên hệ</a>
+    <button id="theme-toggle" type="button" aria-label="Đổi giao diện sáng/tối">🌙</button>
+  </div>
+</nav>
+<header class="hero"><h1>Dự án</h1><p>6 dự án mình đã làm trong quá trình học</p></header>
+<main>
+  <section>
+    <div class="grid projects">
+      <article class="card reveal"><h3>Todo List JS</h3><p>Quản lý công việc hằng ngày bằng JavaScript.</p></article>
+      <article class="card reveal"><h3>Weather App</h3><p>Xem thời tiết theo thành phố qua API.</p></article>
+      <article class="card reveal"><h3>Portfolio cá nhân</h3><p>Website giới thiệu bản thân, deploy lên Internet.</p></article>
+      <article class="card reveal"><h3>Landing Page</h3><p>Trang giới thiệu sản phẩm, responsive mobile first.</p></article>
+      <article class="card reveal"><h3>Trang bán hàng</h3><p>Danh sách sản phẩm dùng CSS Grid.</p></article>
+      <article class="card reveal"><h3>Blog cá nhân</h3><p>Trang blog tĩnh với giao diện sáng/tối.</p></article>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Lê Minh Đăng. Bài tập môn Thiết kế Web.</footer>
+<script src="script.js"></script>
+</body>
+</html>

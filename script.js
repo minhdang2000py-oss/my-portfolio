@@ -1,31 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio của Lê Minh Đăng đã load xong!');
+  // Dark mode
+  const root = document.documentElement;
+  const btn = document.getElementById('theme-toggle');
+  const icon = () => { btn.textContent = root.dataset.theme === 'dark' ? '☀️' : '🌙'; };
+  icon();
+  btn.addEventListener('click', () => {
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    icon();
+  });
 
-    // Chỉ hiện lời chào 1 lần mỗi phiên, ở trang chủ
-    const isHome = document.body.classList.contains('home');
-    let seen = false;
-    try { seen = sessionStorage.getItem('welcomed') === '1'; } catch (e) {}
-    if (isHome && !seen) {
-        alert('Chào mừng bạn đến với portfolio thật trên Internet của mình!');
-        try { sessionStorage.setItem('welcomed', '1'); } catch (e) {}
-    }
-
-    // Đánh dấu trang đang mở trên thanh menu
-    const current = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('nav a').forEach(a => {
-        if (a.getAttribute('href') === current && !a.classList.contains('brand')) {
-            a.classList.add('active');
-        }
-    });
-
-    // Form liên hệ (chỉ demo, không gửi dữ liệu đi đâu)
-    const form = document.getElementById('contact-form');
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            alert('Cảm ơn ' + name + '! Mình đã nhận được lời nhắn của bạn.');
-            form.reset();
-        });
-    }
+  // Animation khi cuộn trang (Intersection Observer)
+  const items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    items.forEach(el => io.observe(el));
+  } else {
+    items.forEach(el => el.classList.add('visible'));
+  }
 });

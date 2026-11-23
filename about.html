@@ -1,58 +1,41 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu - Lê Minh Đăng</title>
-    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giới thiệu - Lê Minh Đăng</title>
+<meta name="description" content="Portfolio của Lê Minh Đăng - sinh viên thiết kế web">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark'}catch(e){}</script>
 </head>
 <body>
-    <nav>
-        <a href="index.html" class="brand">
-            <img src="images/logo.svg" alt="Logo Lê Minh Đăng" class="logo">
-        </a>
-        <a href="index.html">Trang chủ</a>
-        <a href="about.html">Giới thiệu</a>
-        <a href="contact.html">Liên hệ</a>
-    </nav>
-
-    <header>
-        <img src="images/avatar.jpg" alt="Ảnh chân dung Lê Minh Đăng" class="avatar">
-        <h1>Giới thiệu bản thân</h1>
-        <p>Lê Minh Đăng - Sinh viên Thiết kế Web</p>
-    </header>
-
-    <section>
-        <h2>Về mình</h2>
-        <div class="project">
-            Mình là sinh viên năm cuối, yêu thích thiết kế web và mong muốn
-            tìm cơ hội thực tập để phát triển kỹ năng.
-        </div>
-
-        <h2>Học vấn</h2>
-        <div class="project">
-            <strong>Trường Đại học Văn Hiến</strong> (2022 - 2026)<br>
-            Chuyên ngành: Công nghệ thông tin
-        </div>
-
-        <h2>Kỹ năng</h2>
-        <div class="project">
-            <ul>
-                <li>HTML / CSS</li>
-                <li>JavaScript cơ bản</li>
-                <li>Photoshop / Figma</li>
-            </ul>
-        </div>
-
-        <h2>Sở thích</h2>
-        <div class="project">Đọc sách, nghe nhạc, chơi thể thao.</div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Lê Minh Đăng. Bài tập môn Thiết kế Web.</p>
-    </footer>
-
-    <script src="js/script.js"></script>
+<nav>
+  <a href="index.html" class="brand"><img src="logo.svg" alt="Logo Lê Minh Đăng"><span>Lê Minh Đăng</span></a>
+  <div class="links">
+    <a href="index.html">Trang chủ</a>
+    <a href="about.html">Giới thiệu</a>
+    <a href="projects.html">Dự án</a>
+    <a href="contact.html">Liên hệ</a>
+    <button id="theme-toggle" type="button" aria-label="Đổi giao diện sáng/tối">🌙</button>
+  </div>
+</nav>
+<header class="hero"><h1>Giới thiệu</h1></header>
+<main>
+  <section class="reveal">
+    <img src="avatar.jpg" alt="Ảnh chân dung Lê Minh Đăng" class="avatar">
+    <h2>Về mình</h2>
+    <p>Mình là sinh viên đang học thiết kế web. Mình thích HTML, CSS, JavaScript và mong muốn trở thành Full-stack Developer.</p>
+  </section>
+  <section class="reveal">
+    <h2>Kỹ năng</h2>
+    <div class="grid">
+      <div class="card">HTML &amp; CSS</div>
+      <div class="card">JavaScript cơ bản</div>
+      <div class="card">Git &amp; GitHub</div>
+    </div>
+  </section>
+</main>
+<footer>© 2026 Lê Minh Đăng. Bài tập môn Thiết kế Web.</footer>
+<script src="script.js"></script>
 </body>
 </html>
